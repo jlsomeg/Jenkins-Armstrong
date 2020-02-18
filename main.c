@@ -60,7 +60,7 @@ int is_armstrong_number(int numb){
 	}   numb=temp;   
 	value=0;   
 	while(top >=0)   { 
-		int j     
+		int j;    
 		j=pop();      
 		value=value+pow(j,count);   
 	}   
@@ -77,11 +77,11 @@ void push(int m){
 }
 
 int pop(){   
-	int j;   
+	   
 	if(top==-1)
 		return(top);   
 	else   
-	{      
+	{      	int j;
 		j=stack[top];      
 		top--;      
 		return(j);   
