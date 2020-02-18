@@ -3,6 +3,12 @@ is_amstrong_number : main.o
 main.o : main.c
 	gcc -c main.c
 clean:
-	rm main.o is_armstrong_number 
+	rm main.o is_armstrong_number
+
+clean-doc:
+	rm -rf html latex
+
+doc:	clean-doc
+	doxygen
 
 
