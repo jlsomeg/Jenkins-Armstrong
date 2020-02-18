@@ -6,48 +6,28 @@
  */
 # include <stdio.h>
 # include <math.h>
+# include "stack.h"
 
-//! Numero maximo de elementos del stack
-#define max 10
+extern int top;
 
-//! Indice del ultimo elemento
-int top=-1;
-
-//! El stack
-int stack[max];
-/**
-* Aniade un elemento al stack
-*/
-void push(int m);
-/**
-* Aniade un elemento al stack
-*/
-void push(int);
-/**
- * Saca el ultimo elemnto del stack
- */
-int pop();
-/**
- * Verifica si un numero es de Armstrong o no
- *
- * @param numb El numero que queremos comprobar
- *
- * @return int 0 si es de Arm. 1 si no lo es
- */
 int is_armstrong_number(int numb);
 /**
  * El main
  */
-void main(){   
+
+
+int main(){   
 	int n;   
 	printf("Introduce un número entero");   
 	scanf("%d",&n);   
 	if (is_armstrong_number(n))      
 		printf("%d es un número de armstrong \U0001F60E \n", n);   
 	else printf("%d no es un número de armstrong \U0001F622 \n", n);
+return 0;
 }
 
 int is_armstrong_number(int numb){   
+	
 	int temp, count, value;   
 	temp=numb;   
 	count=0;   
@@ -71,19 +51,4 @@ int is_armstrong_number(int numb){
 		return 0;
 }
 
-void push(int m){   
-	top++;   
-	stack[top]=m;
-}
 
-int pop(){   
-	   
-	if(top==-1)
-		return(top);   
-	else   
-	{      	int j;
-		j=stack[top];      
-		top--;      
-		return(j);   
-	}
-}
